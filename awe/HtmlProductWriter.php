@@ -154,6 +154,7 @@ class HtmlProductWriter extends ShopProductWriter
           <select id="producttype" name="producttype">
                 <option value="cd">CD</option>
                 <option value="book">Book</option>
+                <option value="game">Game</option>
           </select> 
           <br />
           <br />
