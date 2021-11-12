@@ -38,7 +38,8 @@ class HtmlProductWriter extends ShopProductWriter
 
         $booktable = $this->generateBookTable($bookproducts);
         $cdtable = $this->generateCdTable($cdproducts);
-
+        $gametable = $this->generateGameTable($gameproducts);
+        
         $addProduct = $this->generateAddProductForm();
 
         return
@@ -46,6 +47,8 @@ class HtmlProductWriter extends ShopProductWriter
             . $booktable .
             '<br />'
             .$cdtable.
+            '<br />'
+            .$gametable.
             '<br />'
             .$addProduct .
             '</body>';
@@ -120,7 +123,7 @@ class HtmlProductWriter extends ShopProductWriter
             $contents .= '<tr>
                   <td>'.$game->getFullName().'</td>'
                 .'<td>'.$game->getTitle().'</td>'
-                .'<td>'.$game->getNumberOfPages().'</td>'
+                .'<td>'.$game->getNumberOfLevels().'</td>'
                 .'<td>'.$game->getPrice().'</td>'
                 .'<td>'.'<a href="./index.php?delete='.$game->getId().'">X</a>'.'</td>
                 </tr>';
@@ -169,7 +172,7 @@ class HtmlProductWriter extends ShopProductWriter
            <input type="text" id="title" name="title">
            <br />
            <br />
-         <label for="pages">Pages/Duration:</label>
+         <label for="pages">Pages/Duration/Levels:</label>
            <input type="text" id="pages" name="pages">
            <br />
            <br />
