@@ -134,9 +134,9 @@ class HtmlProductWriter extends ShopProductWriter
             <table class="paleBlueRows equal-width">
                 <thead>
                     <tr>
-                        <th>AUTHOR</th>
+                        <th>CONSOLE</th>
                         <th>TITLE</th>
-                        <th>PAGES</th>
+                        <th>PEGI</th>
                         <th>PRICE</th>
                         <th>DELETE</th>
                     </tr>
