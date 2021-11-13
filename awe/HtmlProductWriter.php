@@ -34,6 +34,7 @@ class HtmlProductWriter extends ShopProductWriter
         foreach ($this->products as $product) {
          if($product instanceof BookProduct) $bookproducts[] = $product;
          if($product instanceof CdProduct) $cdproducts[] = $product;
+         if($product instanceof GameProduct) $gameproducts[]=$product;
         }
 
         $booktable = $this->generateBookTable($bookproducts);
@@ -161,10 +162,10 @@ class HtmlProductWriter extends ShopProductWriter
           </select> 
           <br />
           <br />
-         <label for="name">Author / Artist:</label><br />
+         <label for="name">Author / Artist / Console:</label><br />
          <label for="fname">First Name:</label>
            <input type="text" id="fname" name="fname"><br />
-          <label for="sname">Main Name / Surname:</label>
+          <label for="sname">Main Name / Surname / Console:</label>
            <input type="text" id="sname" name="sname">
            <br />
            <br />
@@ -172,7 +173,7 @@ class HtmlProductWriter extends ShopProductWriter
            <input type="text" id="title" name="title">
            <br />
            <br />
-         <label for="pages">Pages/Duration/Levels:</label>
+         <label for="pages">Pages/Duration/PEGI:</label>
            <input type="text" id="pages" name="pages">
            <br />
            <br />

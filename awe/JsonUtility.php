@@ -77,7 +77,7 @@ class JsonUtility
 
         if($producttype=='cd') $newProduct['playlength'] = $pages;
         if($producttype=='book') $newProduct['numpages'] = $pages;
-
+        if($producttype=='game') $newProduct['numLevels'] = $pages;
         $products[] = $newProduct;
 
         $json = json_encode($products);
