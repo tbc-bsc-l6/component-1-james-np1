@@ -6,7 +6,7 @@ namespace awe;
 
 class GameProduct extends ShopProduct
 {
-    private $numLevels;
+    private $PegiRating;
 
     public function __construct(
         string $id,
@@ -14,7 +14,7 @@ class GameProduct extends ShopProduct
         string $firstName,
         string $mainName,
         float $price,
-        int $numLevels
+        int $PegiRating
     )
 
     {
@@ -26,11 +26,11 @@ class GameProduct extends ShopProduct
             $mainName,
             $price
         );
-        $this->numLevels = $numLevels;
+        $this->PegiRating = $PegiRating;
     }
 
-    public function getNumberOfLevels()
+    public function getNumberOfPegiRating()
     {
-        return $this->numLevels;
+        return $this->PegiRating;
     }
 }

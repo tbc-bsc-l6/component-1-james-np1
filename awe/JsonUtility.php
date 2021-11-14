@@ -26,7 +26,7 @@ class JsonUtility
                     break;
                     case "game":
                         $gameproduct = new \awe\GameProduct($product['id'],$product['title'], $product['firstname'],
-                            $product['mainname'],$product['price'], $product['numLevels']);
+                            $product['mainname'],$product['price'], $product['PegiRating']);
                         $products[]=$gameproduct;
                         break;
             }
@@ -77,7 +77,7 @@ class JsonUtility
 
         if($producttype=='cd') $newProduct['playlength'] = $pages;
         if($producttype=='book') $newProduct['numpages'] = $pages;
-        if($producttype=='game') $newProduct['numLevels'] = $pages;
+        if($producttype=='game') $newProduct['PegiRating'] = $pages;
         $products[] = $newProduct;
 
         $json = json_encode($products);

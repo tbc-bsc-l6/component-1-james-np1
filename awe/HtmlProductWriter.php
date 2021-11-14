@@ -124,7 +124,7 @@ class HtmlProductWriter extends ShopProductWriter
             $contents .= '<tr>
                   <td>'.$game->getFullName().'</td>'
                 .'<td>'.$game->getTitle().'</td>'
-                .'<td>'.$game->getNumberOfLevels().'</td>'
+                .'<td>'.$game->getNumberOfPegiRating().'</td>'
                 .'<td>'.$game->getPrice().'</td>'
                 .'<td>'.'<a href="./index.php?delete='.$game->getId().'">X</a>'.'</td>
                 </tr>';
