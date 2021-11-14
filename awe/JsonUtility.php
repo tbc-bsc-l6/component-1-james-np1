@@ -24,6 +24,11 @@ class JsonUtility
                         $product['mainname'],$product['price'], $product['numpages']);
                     $products[]=$bookproduct;
                     break;
+                    case "game":
+                        $gameproduct = new \awe\GameProduct($product['id'],$product['title'], $product['firstname'],
+                            $product['mainname'],$product['price'], $product['PegiRating']);
+                        $products[]=$gameproduct;
+                        break;
             }
         }
         return $products;
@@ -72,7 +77,7 @@ class JsonUtility
 
         if($producttype=='cd') $newProduct['playlength'] = $pages;
         if($producttype=='book') $newProduct['numpages'] = $pages;
-
+        if($producttype=='game') $newProduct['PegiRating'] = $pages;
         $products[] = $newProduct;
 
         $json = json_encode($products);
